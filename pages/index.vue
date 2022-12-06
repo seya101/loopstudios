@@ -84,13 +84,13 @@
 <script setup>
 
 const creationsList = [
-      { text: "Deep Earth", img: '/_nuxt/src/images/desktop/image-deep-earth.jpg'},
-      { text: "Night Arcade", img: '/_nuxt/src/images/desktop/image-night-arcade.jpg'},
-      { text: "Soccer Team VR", img: '/_nuxt/src/images/desktop/image-soccer-team.jpg'},
-      { text: "The Grid", img: '/_nuxt/src/images/desktop/image-grid.jpg'},
-      { text: "From UP Above VR", img: '/_nuxt/src/images/desktop/image-from-above.jpg'},
-      { text: "Pocket Borealis", img: '/_nuxt/src/images/desktop/image-pocket-borealis.jpg'},
-      { text: "The Curiosity", img: '/_nuxt/src/images/desktop/image-curiosity.jpg'},
-      { text: "Make It Fisheye", img: '/_nuxt/src/images/desktop/image-fisheye.jpg'},
+      { text: "Deep Earth", img: '../src/images/desktop/image-deep-earth.jpg'},
+      { text: "Night Arcade", img: '../src/images/desktop/image-night-arcade.jpg'},
+      { text: "Soccer Team VR", img: '../src/images/desktop/image-soccer-team.jpg'},
+      { text: "The Grid", img: '../src/images/desktop/image-grid.jpg'},
+      { text: "From UP Above VR", img: '../src/images/desktop/image-from-above.jpg'},
+      { text: "Pocket Borealis", img: '../src/images/desktop/image-pocket-borealis.jpg'},
+      { text: "The Curiosity", img: '../src/images/desktop/image-curiosity.jpg'},
+      { text: "Make It Fisheye", img: '../src/images/desktop/image-fisheye.jpg'},
   ]
 </script>
