@@ -44,7 +44,7 @@
           v-for="({ text, img}, index) in creationsList"
           :key="index"
     >
-      <img class="rounded-sm w-full" :src="img"  />
+      <img class="rounded-sm w-full" :src="images[img]"  />
       <h1 class="absolute uppercase left-[30px] right-[30px] top-3/4 text-white font-medium text-4xl tracking-widest w-auto">{{ text }}</h1>
     </div>
   </section>
@@ -82,15 +82,23 @@
 </template>
 
 <script setup>
+import { filename } from 'pathe/utils';
+
+const glob = import.meta.glob('~/src/images/desktop/*.jpg', { eager: true });
+const images = Object.fromEntries(
+  Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+);
 
 const creationsList = [
-      { text: "Deep Earth", img: '../src/images/desktop/image-deep-earth.jpg'},
-      { text: "Night Arcade", img: '../src/images/desktop/image-night-arcade.jpg'},
-      { text: "Soccer Team VR", img: '../src/images/desktop/image-soccer-team.jpg'},
-      { text: "The Grid", img: '../src/images/desktop/image-grid.jpg'},
-      { text: "From UP Above VR", img: '../src/images/desktop/image-from-above.jpg'},
-      { text: "Pocket Borealis", img: '../src/images/desktop/image-pocket-borealis.jpg'},
-      { text: "The Curiosity", img: '../src/images/desktop/image-curiosity.jpg'},
-      { text: "Make It Fisheye", img: '../src/images/desktop/image-fisheye.jpg'},
+      { text: "Deep Earth", img: 'image-deep-earth'},
+      { text: "Night Arcade", img: 'image-night-arcade'},
+      { text: "Soccer Team VR", img: 'image-soccer-team'},
+      { text: "The Grid", img: 'image-grid'},
+      { text: "From UP Above VR", img: 'image-from-above'},
+      { text: "Pocket Borealis", img: 'image-pocket-borealis'},
+      { text: "The Curiosity", img: 'image-curiosity'},
+      { text: "Make It Fisheye", img: 'image-fisheye'},
   ]
+
+
 </script>
